@@ -26,6 +26,11 @@
 </head>
 <body>
 	<header class="header">ToDo list</header>
+	<div id="test-cont"><div>
 	<script type="text/javascript" src="script.js"></script>
+	<script>
+		var div = document.querySelector("#test-cont");
+		div.innerText = "width: " + window.innerWidth + " / height: " + window.innerHeight;
+	</script>
 </body>
 </html>
