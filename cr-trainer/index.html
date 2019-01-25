@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CR-trainer</title>
+  </head>
+  <body>
+    <h1>Language trainer</h1>
+    <script type="text/javascript">
+      var url = new URL(location);
+      var params = new URLSearchParams(url.search);
+      var arr = JSON.parse(params.get('q'));
+      var container = document.createElement('div');
+      document.body.append(container);
+      var html = '<hr/>';
+      for (let i = 0; i < arr.length; i++) {
+        html += '<div>' + arr[i].src + '</div>'
+          + '<div>' + arr[i].trg + '</div>'
+          + '<hr/>';
+      }
+      container.innerHTML = html;
+    </script>
+  </body>
+</html>
+
